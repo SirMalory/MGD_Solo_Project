@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputBroadcaster : MonoBehaviour
 {
+    private PlayerInput _playerInput;
+
+    private InputAction _touchPressAction;
     public bool IsTapPressed { get; private set; } = false;
     //ADD OTHER INPUT HERE
 
