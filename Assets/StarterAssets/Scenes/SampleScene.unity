@@ -567,11 +567,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a3514a7bbf0b147a40ac8ee96eaac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PlayerUnitPrefab>k__BackingField: {fileID: 8934357242782843749, guid: d7d3c5c36f3ba364f97147fe5671e13c,
+  _tapLimitDuration: 2.5
+  _playerUnitPrefab: {fileID: 8934357242782843749, guid: d7d3c5c36f3ba364f97147fe5671e13c,
     type: 3}
-  <PlayerUnitSpawnLocation>k__BackingField: {fileID: 1595932338}
-  <UnitSpawner>k__BackingField: {fileID: 503850264}
-  <Input>k__BackingField: {fileID: 821391523}
+  _playerUnitSpawnLocation: {fileID: 1595932338}
+  _unitSpawner: {fileID: 503850264}
+  _input: {fileID: 821391523}
 --- !u!4 &1985332321
 Transform:
   m_ObjectHideFlags: 0

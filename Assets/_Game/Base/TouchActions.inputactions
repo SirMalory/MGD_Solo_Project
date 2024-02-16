@@ -1,0 +1,34 @@
+{
+    "name": "TouchActions",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "65ad8b68-8546-457a-956b-fccecaaca6d6",
+            "actions": [
+                {
+                    "name": "Shoot",
+                    "type": "Value",
+                    "id": "b498e54d-3fcd-4c55-91f9-89817173b8ed",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "35e852a4-32ca-4a95-924d-19d7c5b47967",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
