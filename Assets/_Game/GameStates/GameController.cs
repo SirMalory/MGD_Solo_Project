@@ -16,10 +16,16 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private InputBroadcaster _input;
 
+    public AudioSource _setupTrigger;
+
+    public AudioSource _gameplayTrigger;
+
 
     public float TapLimitDuration => _tapLimitDuration;
     public Unit PlayerUnitPrefab => _playerUnitPrefab;
     public Transform PlayerUnitSpawnLocation => _playerUnitSpawnLocation;
     public UnitSpawner UnitSpawner => _unitSpawner;
     public InputBroadcaster Input => _input;
+
+
 }

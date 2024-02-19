@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GamePlayState : State
 {
@@ -19,6 +20,7 @@ public class GamePlayState : State
         Debug.Log("STATE: GAME PLAY");
         Debug.Log("Inputs?");
         Debug.Log("Display PLAY");
+        _controller._gameplayTrigger.Play();
     }
 
     public override void Exit()
@@ -39,9 +41,18 @@ public class GamePlayState : State
             Debug.Log("WIN?");
             //Reload level or change to setup
         }
+
+        if (_controller.Input.IsExitPressed == true)
+        {
+            Debug.Log("GET OUT");
+            SceneManager.LoadScene("MainMenu");
+            //Reload level or change to setup
+        }
+
+
         else if(StateDuration >= _controller.TapLimitDuration)
         {
-            Debug.Log("lose?");
+            //Debug.Log("lose?");
         }
 
 

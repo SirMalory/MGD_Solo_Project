@@ -22,6 +22,7 @@ public class GameSetupState : State
         Debug.Log("STATE: GAME SETUP");
         Debug.Log("SETTING UP");
         Debug.Log("SPAWN UNITS IN SETUP");
+        _controller._setupTrigger.Play();
         _controller.UnitSpawner.Spawn(_controller.PlayerUnitPrefab,
             _controller.PlayerUnitSpawnLocation);
         //Instantiate(_controller.PlayerUnitPrefab,

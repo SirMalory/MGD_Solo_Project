@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] AudioClip startingSong;
+    [SerializeField] AudioClip _startingSong;
 
     void Start()
     {
 
-        if (startingSong != null)
+        if (_startingSong != null)
         {
-            AudioManager.Instance.PlaySong(startingSong);
+            AudioManager.Instance.PlaySong(_startingSong);
         }
     }
     public void PlayGame()
@@ -22,6 +22,12 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ExitMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
 }

@@ -9,14 +9,17 @@ public class InputBroadcaster : MonoBehaviour
     private PlayerInput _playerInput;
 
     private InputAction _touchPressAction;
-    private InputAction _touchPositionAction;
+    private InputAction _touchExitAction;
     public bool IsTapPressed { get; private set; } = false;
+    public bool IsExitPressed { get; private set; } = false;
     //ADD OTHER INPUT HERE
 
     public void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
         _touchPressAction = _playerInput.actions["Shoot"];
+        _touchExitAction = _playerInput.actions["Exit"];
+
     }
 
     private void Update()
@@ -29,6 +32,15 @@ public class InputBroadcaster : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             IsTapPressed = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            IsExitPressed = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            IsExitPressed = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
