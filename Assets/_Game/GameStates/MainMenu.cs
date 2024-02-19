@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] AudioClip startingSong;
-    //[SerializeField] Text highScoreTextView;
 
     void Start()
     {
@@ -15,7 +15,10 @@ public class MainMenu : MonoBehaviour
             AudioManager.Instance.PlaySong(startingSong);
         }
     }
-
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     public void QuitGame()
     {
         Application.Quit();
