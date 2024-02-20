@@ -25,9 +25,6 @@ public class GameSetupState : State
         _controller._setupTrigger.Play();
         _controller.UnitSpawner.Spawn(_controller.PlayerUnitPrefab,
             _controller.PlayerUnitSpawnLocation);
-        //Instantiate(_controller.PlayerUnitPrefab,
-        //    _controller.PlayerUnitSpawnLocation.position,
-        //    _controller.PlayerUnitSpawnLocation.rotation);
  
     }
 

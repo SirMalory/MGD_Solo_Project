@@ -6,44 +6,44 @@
             "id": "65ad8b68-8546-457a-956b-fccecaaca6d6",
             "actions": [
                 {
-                    "name": "Shoot",
+                    "name": "TapAction",
                     "type": "Value",
-                    "id": "b498e54d-3fcd-4c55-91f9-89817173b8ed",
-                    "expectedControlType": "Vector2",
+                    "id": "7c49c3c5-efbe-4476-b5d2-972051f825ba",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Exit",
+                    "name": "ExitAction",
                     "type": "Button",
-                    "id": "29383fac-93b3-4704-8f45-8ab9945fc7e0",
+                    "id": "7032588f-3471-4c42-a0a4-ddade4f57110",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "Hold(duration=5)",
                     "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "35e852a4-32ca-4a95-924d-19d7c5b47967",
-                    "path": "<Touchscreen>/position",
-                    "interactions": "Tap",
+                    "id": "39e5a73d-585b-480b-80c6-ec30c913657b",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "TapAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4f09c966-d5de-4bca-a3b6-fd3c4fac6e60",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "Tap",
+                    "id": "e1fb5cdf-d6e3-444d-98b1-a16ff02d02f7",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Exit",
+                    "action": "ExitAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

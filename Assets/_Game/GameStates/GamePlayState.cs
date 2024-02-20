@@ -36,24 +36,25 @@ public class GamePlayState : State
     public override void Tick()
     {
         base.Tick();
-        if(_controller.Input.IsTapPressed == true)
-        {
-            Debug.Log("WIN?");
+        //if(_controller.Input.IsTapPressed == true)
+        //{
+            //Debug.Log("WIN?");
             //Reload level or change to setup
-        }
+        //}
 
-        if (_controller.Input.IsExitPressed == true)
-        {
-            Debug.Log("GET OUT");
-            SceneManager.LoadScene("MainMenu");
+        //if (_controller.Input.IsExitPressed == true)
+        //{
+        //    Debug.Log("GET OUT");
+        //    _stateMachine.ChangeState(_stateMachine.SetupState);
+        //    SceneManager.LoadScene("MainMenu");
             //Reload level or change to setup
-        }
+       //}
 
 
-        else if(StateDuration >= _controller.TapLimitDuration)
-        {
+        //else if(StateDuration >= _controller.TapLimitDuration)
+        //{
             //Debug.Log("lose?");
-        }
+        //}
 
 
     }
