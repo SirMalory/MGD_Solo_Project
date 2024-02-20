@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad73ece4fc1ad046bec570c732092e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingSong: {fileID: 0}
+  _startingSong: {fileID: 8300000, guid: 4ce417a1a233dd5419b795300e2cf983, type: 3}
 --- !u!1 &2019434388
 GameObject:
   m_ObjectHideFlags: 0

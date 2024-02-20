@@ -7,30 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class InputBroadcaster : MonoBehaviour
 {
-    public event Action Clicked;
+    //public event Action Clicked;
 
-    public Vector2 TouchScreenPosition { get; private set; }
-    public bool TouchIsHeld { get; private set; }
+    //public Vector2 TouchScreenPosition { get; private set; }
+    //public bool TouchIsHeld { get; private set; }
 
     void Update()
     {
-        if (Input.touchCount > 0)
-        {
-            TouchIsHeld = true;
-            // update touch location
-            Touch touch = Input.GetTouch(0);
-            // detect if this touch just happened
-            if (touch.phase == UnityEngine.TouchPhase.Began)
-            {
-                Clicked?.Invoke();
-            }
-            //update location
-            TouchScreenPosition = touch.position;
-        }
-        else
-        {
-            TouchIsHeld = false;
-        }
+
+    }
+
+    private void OnEnable()
+    {
+        //Clicked.Clicked += OnClicked;
+    }
+
+    private void OnDisable()
+    {
+        //TouchInput.Clicked -= OnClicked;
     }
     //private PlayerInput _playerInput;
 
