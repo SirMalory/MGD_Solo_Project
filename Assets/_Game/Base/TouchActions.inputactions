@@ -6,44 +6,44 @@
             "id": "65ad8b68-8546-457a-956b-fccecaaca6d6",
             "actions": [
                 {
-                    "name": "TapAction",
+                    "name": "TouchPosition",
                     "type": "Value",
-                    "id": "7c49c3c5-efbe-4476-b5d2-972051f825ba",
+                    "id": "8f3e3ff1-eeb4-4488-ba70-029a5e31112d",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Press(behavior=1)",
+                    "interactions": "",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ExitAction",
+                    "name": "TouchPress",
                     "type": "Button",
-                    "id": "7032588f-3471-4c42-a0a4-ddade4f57110",
+                    "id": "79ebe234-7dbb-42f0-ab23-c2c152f632cc",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold(duration=5)",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "39e5a73d-585b-480b-80c6-ec30c913657b",
-                    "path": "<Touchscreen>/Press",
+                    "id": "87e05533-0bc1-4b02-a9fa-7c95b0ca7f9b",
+                    "path": "<Touchscreen>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TapAction",
+                    "action": "TouchPosition",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "e1fb5cdf-d6e3-444d-98b1-a16ff02d02f7",
-                    "path": "<Touchscreen>/Press",
+                    "id": "63f0c520-8a08-4c6b-99a7-160365f0c0de",
+                    "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ExitAction",
+                    "action": "TouchPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

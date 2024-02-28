@@ -3,82 +3,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class InputBroadcaster : MonoBehaviour
 {
-    //public event Action Clicked;
+    private PlayerInput playerInput;
+    private InputAction touchPressAction;
+    //private InputAction touchPositionAction;
 
-    //public Vector2 TouchScreenPosition { get; private set; }
-    //public bool TouchIsHeld { get; private set; }
-
-    void Update()
+    private void Awake()
     {
+        playerInput = GetComponent<PlayerInput>();
+        touchPressAction = playerInput.actions["TouchPress"];
+        //touchPositionAction = playerInput.actions["TouchPosition"];
 
     }
 
-    private void OnEnable()
+    private void onEnable()
     {
-        //Clicked.Clicked += OnClicked;
+         touchPressAction.performed += TouchPressed;
     }
 
-    private void OnDisable()
+    private void onDisable()
     {
-        //TouchInput.Clicked -= OnClicked;
+        touchPressAction.performed -= TouchPressed;
     }
-    //private PlayerInput _playerInput;
 
-    //private InputAction _touchPressAction;
-    //private InputAction _touchExitAction;
-    //public bool IsTapPressed { get; private set; } = false;
-    //public bool IsExitPressed { get; private set; } = false;
-    //ADD OTHER INPUT HERE
+    private void TouchPressed(InputAction.CallbackContext context) {
+         float value = context.ReadValue<float>();
+         Debug.Log("NOW");
+    }
 
-    // public void Awake()
-    //{
-    //     _playerInput = GetComponent<PlayerInput>();
-    //    _touchPressAction = _playerInput.actions.FindAction("TapAction");
-    //    _touchExitAction = _playerInput.actions.FindAction("ExitAction");
-
-    //}
-
-    // public void onEnable()
-    // {
-    //     _touchPressAction.performed += TouchPressed;
-    // }
-
-    // public void OnDisable()
-    //{
-    //    _touchPressAction.performed -= TouchPressed;
-    // }
-
-    // public void TouchPressed(InputAction.CallbackContext context) {
-    //     float value = context.ReadValue<float>();
-    //     Debug.Log("value");
-    // }
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Mouse0))
-    //    {
-    //        IsTapPressed = true;
-    //    }
-    //    else if (Input.GetKeyUp(KeyCode.Mouse0))
-    //    {
-    //        IsTapPressed = false;
-    //    }
-
-    //    if (Input.GetKeyDown(KeyCode.Mouse1))
-    //    {
-    //        IsExitPressed = true;
-    //    }
-    //    else if (Input.GetKeyUp(KeyCode.Mouse1))
-    //  {
-    //    IsExitPressed = false;
-    //}
-    //
-    // if (Input.GetKeyDown(KeyCode.Escape))
-    // {
-    //    SceneManager.LoadScene("MainMenu");
-    //}
-    //}
 }

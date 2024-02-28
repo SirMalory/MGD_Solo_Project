@@ -792,7 +792,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Touch
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 330585545}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1275881913
 MonoBehaviour:
   m_ObjectHideFlags: 0
