@@ -2,36 +2,35 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-//using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 public class InputBroadcaster : MonoBehaviour
 {
-    private PlayerInput playerInput;
-    private InputAction touchPressAction;
-    //private InputAction touchPositionAction;
+    private GameController _controller;
 
-    private void Awake()
+    private void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
-        touchPressAction = playerInput.actions["TouchPress"];
-        //touchPositionAction = playerInput.actions["TouchPosition"];
-
+        
     }
 
-    private void onEnable()
+    private void Update()
     {
-         touchPressAction.performed += TouchPressed;
-    }
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
 
-    private void onDisable()
-    {
-        touchPressAction.performed -= TouchPressed;
-    }
+            if (touch.phase == TouchPhase.Began)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                RaycastHit hit;
 
-    private void TouchPressed(InputAction.CallbackContext context) {
-         float value = context.ReadValue<float>();
-         Debug.Log("NOW");
+                if (Physics.Raycast(ray, out hit))
+                {
+                   // _controller.
+                        //.destination = hit.point;
+                }
+            }
+        }
     }
 
 }

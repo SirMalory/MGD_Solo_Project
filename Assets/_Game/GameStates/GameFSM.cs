@@ -15,8 +15,6 @@ public class GameFSM : StateMachineMB
     {
         _controller = GetComponent<GameController>();
         //Instantiation Here, but Wont Accept NEW for some reason
-        //SetupState = gameObject.AddComponent<GameSetupState>();
-        //PlayState = gameObject.AddComponent<GamePlayState>();
         SetupState = new GameSetupState(this,_controller);
         PlayState = new GamePlayState(this,_controller);
         Debug.Log("FSM Functional");
@@ -25,5 +23,10 @@ public class GameFSM : StateMachineMB
     private void Start()
     {
         ChangeState(SetupState);
+    }
+
+    public void ChangeState()
+    {
+        ChangeState(PlayState);
     }
 }

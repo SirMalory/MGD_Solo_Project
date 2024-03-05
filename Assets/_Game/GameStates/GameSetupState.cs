@@ -20,8 +20,7 @@ public class GameSetupState : State
         base.Enter();
 
         Debug.Log("STATE: GAME SETUP");
-        Debug.Log("SETTING UP");
-        Debug.Log("SPAWN UNITS IN SETUP");
+        Debug.Log("Spawning Player");
         _controller._setupTrigger.Play();
         _controller.UnitSpawner.Spawn(_controller.PlayerUnitPrefab,
             _controller.PlayerUnitSpawnLocation);
@@ -31,6 +30,7 @@ public class GameSetupState : State
     public override void Exit()
     {
         base.Exit();
+        _stateMachine.ChangeState(_stateMachine.PlayState);
     }
 
     public override void FixedTick()

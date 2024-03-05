@@ -18,8 +18,7 @@ public class GamePlayState : State
     {
         base.Enter();
         Debug.Log("STATE: GAME PLAY");
-        Debug.Log("Inputs?");
-        Debug.Log("Display PLAY");
+        Debug.Log("Enabling Controls");
         _controller._gameplayTrigger.Play();
     }
 
@@ -36,25 +35,6 @@ public class GamePlayState : State
     public override void Tick()
     {
         base.Tick();
-        //if(_controller.Input.IsTapPressed == true)
-        //{
-            //Debug.Log("WIN?");
-            //Reload level or change to setup
-        //}
-
-        //if (_controller.Input.IsExitPressed == true)
-        //{
-        //    Debug.Log("GET OUT");
-        //    _stateMachine.ChangeState(_stateMachine.SetupState);
-        //    SceneManager.LoadScene("MainMenu");
-            //Reload level or change to setup
-       //}
-
-
-        //else if(StateDuration >= _controller.TapLimitDuration)
-        //{
-            //Debug.Log("lose?");
-        //}
 
 
     }
