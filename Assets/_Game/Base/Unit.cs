@@ -19,7 +19,7 @@ public class Unit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void Level_1()
@@ -58,5 +58,14 @@ public class Unit : MonoBehaviour
             Destroy(gameObject);
         }
         players.Clear();
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Apple"))
+        {
+            Debug.Log("EATEN");
+            Destroy(other.gameObject);
+        }
     }
 }

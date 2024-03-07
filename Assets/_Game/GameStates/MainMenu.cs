@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] AudioClip _startingSong;
+    public AudioSource _MenuCue;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        _MenuCue.Play();
     }
     public void QuitGame()
     {

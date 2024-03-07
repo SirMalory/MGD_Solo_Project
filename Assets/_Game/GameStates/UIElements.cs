@@ -14,6 +14,7 @@ public class UIElements : MonoBehaviour
     private GameController _controller;
     public GameSetupState _setupState;
     public float _cameraSet = 0;
+    public AudioSource _lvlTrigger;
 
     void Start()
     {
@@ -31,7 +32,6 @@ public class UIElements : MonoBehaviour
 
     public void SwapCameraPosition()
     {
-        //
         Debug.Log("Level Switch");
         if (_cameraSet == 0)
         {
@@ -54,6 +54,11 @@ public class UIElements : MonoBehaviour
             _cameraSet -= 2;
             _player.Level_1();
         }
+    }
+
+    public void Transition()
+    {
+        _lvlTrigger.Play();
     }
 
 
