@@ -9,7 +9,7 @@ public class AppleSpawner : MonoBehaviour
 
     private void Awake()
     {
-        SpawnApples();
+        //SpawnApples();
     }
     private void Update()
     {
