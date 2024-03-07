@@ -10,11 +10,13 @@ public class UIElements : MonoBehaviour
     [SerializeField] AudioClip _startingSong;
     [SerializeField] Camera _camera;
     [SerializeField] Unit _player;
+    [SerializeField] AudioClip _gameSong;
 
     private GameController _controller;
     public GameSetupState _setupState;
     public float _cameraSet = 0;
     public AudioSource _lvlTrigger;
+    public AudioSource _eatApple;
 
     void Start()
     {
@@ -28,6 +30,11 @@ public class UIElements : MonoBehaviour
     {
         Debug.Log("Exiting Game");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void GameSong()
+    {
+        AudioManager.Instance.PlaySong(_gameSong);
     }
 
     public void SwapCameraPosition()
@@ -59,6 +66,20 @@ public class UIElements : MonoBehaviour
     public void Transition()
     {
         _lvlTrigger.Play();
+    }
+
+    public void EatApple()
+    {
+        if (_eatApple != null)
+        {
+            _eatApple = GetComponent<AudioSource>();
+            _eatApple.Play();
+        }
+        else
+        {
+
+            _eatApple.Play();
+        }
     }
 
 

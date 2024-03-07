@@ -8,6 +8,7 @@ public class GameSetupState : State
     private GameFSM _stateMachine;
     private GameController _controller;
     public Unit _unit;
+    private UIElements _elements;
 
     public bool _exitingGame = true;
 
@@ -36,6 +37,7 @@ public class GameSetupState : State
         if (_exitingGame == false)
         {
             _stateMachine.ChangeState(_stateMachine.PlayState);
+            _elements.GameSong();
         }
         else
         {
