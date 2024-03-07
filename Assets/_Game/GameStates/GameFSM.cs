@@ -10,13 +10,15 @@ public class GameFSM : StateMachineMB
     public GameSetupState SetupState { get; private set; }
     public GamePlayState PlayState { get; private set; }
 
+    public bool Alternate = false;
+
 
     private void Awake()
     {
         _controller = GetComponent<GameController>();
         //Instantiation Here, but Wont Accept NEW for some reason
-        SetupState = new GameSetupState(this,_controller);
-        PlayState = new GamePlayState(this,_controller);
+        SetupState = new GameSetupState(this, _controller);
+        PlayState = new GamePlayState(this, _controller);
         Debug.Log("FSM Functional");
     }
 
@@ -27,6 +29,14 @@ public class GameFSM : StateMachineMB
 
     public void ChangeState()
     {
-        ChangeState(PlayState);
+        if (Alternate == false)
+        {
+            ChangeState(PlayState);
+        }
+        else
+        {
+            ChangeState(SetupState);
+        }
     }
+
 }

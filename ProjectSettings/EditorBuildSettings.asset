@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/MainMenu.unity
     guid: 5b6ffc2efac928d4792ef464492b75b4
   - enabled: 1
-    path: Assets/_Game/Scenes/TowerDefense.unity
-    guid: 06af59c2a76bdb84cad065e9816f177f
+    path: Assets/_Game/Scenes/HungryMoth.unity
+    guid: 5f6c55e97436e3e43af29764b92b2cab
   m_configObjects: {}

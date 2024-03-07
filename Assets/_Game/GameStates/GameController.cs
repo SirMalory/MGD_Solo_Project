@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [Header("Game Data")]
-    [SerializeField] private float _tapLimitDuration = 2.5f;
+    [SerializeField] private float _levelDuration = 10f;
 
     [Header("Game Dependencies")]
     [SerializeField] private Unit _playerUnitPrefab;
@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     public AudioSource _gameplayTrigger;
 
 
-    public float TapLimitDuration => _tapLimitDuration;
+    public float LevelDuration => _levelDuration;
     public Unit PlayerUnitPrefab => _playerUnitPrefab;
     public Transform PlayerUnitSpawnLocation => _playerUnitSpawnLocation;
     public UnitSpawner UnitSpawner => _unitSpawner;
