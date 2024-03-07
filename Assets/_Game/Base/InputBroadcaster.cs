@@ -6,7 +6,10 @@ using UnityEngine.AI;
 
 public class InputBroadcaster : MonoBehaviour
 {
-    private GameController _controller;
+    //private GameController _controller;
+    [SerializeField] private NavMeshAgent _navMeshAgent;
+
+    public NavMeshAgent NavMeshAgent => _navMeshAgent;
 
     private void Start()
     {
@@ -26,8 +29,7 @@ public class InputBroadcaster : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                   // _controller.
-                        //.destination = hit.point;
+                    _navMeshAgent.destination = hit.point;
                 }
             }
         }

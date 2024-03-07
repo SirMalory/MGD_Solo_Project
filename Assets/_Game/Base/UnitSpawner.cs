@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class UnitSpawner : MonoBehaviour
 {
-    public Unit Spawn(Unit unitPrefab, Transform location)
+    public Unit _player;
+    public void Spawn()
     {
-        //Spawn and Hold Component Type
-        Unit newUnit = Instantiate(unitPrefab,
-            location.position, location.rotation);
+        _player.Level_1();
         //ADD SPAWN EFFECTS LATER
-        return newUnit;
     }
 }

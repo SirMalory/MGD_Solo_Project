@@ -18,7 +18,6 @@ public class GamePlayState : State
     {
         base.Enter();
         Debug.Log("STATE: GAME PLAY");
-        Debug.Log("Enabling Controls");
         _controller._gameplayTrigger.Play();
     }
 

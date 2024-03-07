@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class GameSetupState : State
 {
+
     private GameFSM _stateMachine;
     private GameController _controller;
+    public Unit _unit;
+
+    public bool _exitingGame = true;
 
     //Constructor, Called on State Creation
     public GameSetupState(GameFSM stateMachine, GameController controller)
@@ -15,22 +19,29 @@ public class GameSetupState : State
         _controller = controller;
     }
 
+
+
     public override void Enter()
     {
         base.Enter();
 
         Debug.Log("STATE: GAME SETUP");
-        Debug.Log("Spawning Player");
         _controller._setupTrigger.Play();
-        _controller.UnitSpawner.Spawn(_controller.PlayerUnitPrefab,
-            _controller.PlayerUnitSpawnLocation);
- 
+        _controller.UnitSpawner.Spawn();
     }
 
     public override void Exit()
     {
         base.Exit();
-        _stateMachine.ChangeState(_stateMachine.PlayState);
+        if (_exitingGame == false)
+        {
+            _stateMachine.ChangeState(_stateMachine.PlayState);
+        }
+        else
+        {
+            _stateMachine.ChangeState(_stateMachine.CurrentState);
+        }
+        //_stateMachine.ChangeState(_stateMachine.PlayState);
     }
 
     public override void FixedTick()

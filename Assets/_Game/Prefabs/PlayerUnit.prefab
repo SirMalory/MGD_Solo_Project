@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8934357240918110899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 8934357242782843747}
   - component: {fileID: 8934357242782843746}
   - component: {fileID: 8934357242782843749}
+  - component: {fileID: -1895694656741631872}
   - component: {fileID: -7164731599496431635}
   m_Layer: 0
   m_Name: PlayerUnit
@@ -110,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8934357242782843748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6679007, y: 6.6098804, z: -13.761622}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -143,6 +144,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a14dfbf18508c240a494e51e8f04096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelTransform_lv1: {fileID: 6513846693477264730, guid: 531dae19106288b4fb7b37949abc8d27,
+    type: 3}
+  levelTransform_lv2: {fileID: 438661430387485608, guid: 513f4278b4984e846b49e9d471db632f,
+    type: 3}
+  levelTransform_lv3: {fileID: 2606826064275551316, guid: 62a9322c5da544f4fad5071cb804681e,
+    type: 3}
+  _player: {fileID: 8934357242782843748}
+--- !u!114 &-1895694656741631872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934357242782843748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41831b4b17f1ddc49a5ea19aac5d2ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _navMeshAgent: {fileID: -7164731599496431635}
 --- !u!195 &-7164731599496431635
 NavMeshAgent:
   m_ObjectHideFlags: 0

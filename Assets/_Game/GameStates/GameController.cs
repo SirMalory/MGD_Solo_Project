@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private Transform _playerUnitSpawnLocation;
 
+    [SerializeField] public Transform _playerUnitSpawnLocation_lv_2;
+
+    [SerializeField] public Transform _playerUnitSpawnLocation_lv_3;
+
     [SerializeField] private UnitSpawner _unitSpawner;
 
     [SerializeField] private InputBroadcaster _input;
